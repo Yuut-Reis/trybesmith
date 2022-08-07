@@ -9,11 +9,13 @@ export default class ServiceProduct {
     this.model = new ModelProduct(connection);
   }
 
-  public newProduct(data: InterfaceProduct): Promise<InterfaceProduct> {
-    return this.model.newProduct(data);
+  public async newProduct(data: InterfaceProduct): Promise<InterfaceProduct> {
+    const product = await this.model.newProduct(data);
+    return product;
   }
 
-  public listProduct(): Promise<InterfaceProduct[]> {
-    return this.model.listProduct();
+  public async listProduct(): Promise<InterfaceProduct[]> {
+    const list = await this.model.listProduct();
+    return list;
   }
 }
