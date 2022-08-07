@@ -12,4 +12,8 @@ export default class ServiceProduct {
   public newProduct(data: InterfaceProduct): Promise<InterfaceProduct> {
     return this.model.newProduct(data);
   }
+
+  public listProduct(): Promise<InterfaceProduct[]> {
+    return this.model.listProduct();
+  }
 }
