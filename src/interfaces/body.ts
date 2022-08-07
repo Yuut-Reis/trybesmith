@@ -5,3 +5,12 @@ export interface InterfaceProduct {
   orderId?: number;
 
 }
+
+export interface InterfaceUser {
+  id?: number;
+  username: string;
+  classe: string;
+  level: number;
+  password?: string;
+
+}
